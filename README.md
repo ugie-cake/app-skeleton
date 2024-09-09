@@ -99,7 +99,6 @@ This is done using the relevant `ContentBlocksHelper` functions:
 
 Add a new record to the `content_blocks` table with a `type` of `html`.
 
-An [example seed can be found in the `HtmlBlockSeed.php` file](./config/Seeds/HtmlBlockSeed.php):
 ```php
 <?php
 # File: config/Seeds/HtmlBlockSeed.php
@@ -142,7 +141,6 @@ In a layout or view template, add the following:
 
 Add a new record to the `content_blocks` table with a `type` of `text`.
 
-An [example seed can be found in the `TextBlockSeed.php` file](./config/Seeds/TextBlockSeed.php):
 ```php
 <?php
 # File: config/Seeds/TextBlockSeed.php
@@ -174,7 +172,6 @@ class TextBlockSeed extends \Migrations\AbstractSeed
 
 Add a new record to the `content_blocks` table with a `type` of `image`.
 
-An [example seed can be found in the `ImageBlockSeed.php` file](./config/Seeds/ImageBlockSeed.php):
 ```php
 <?php
 # File: config/Seeds/ImageBlockSeed.php

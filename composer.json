@@ -1,6 +1,6 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
+    "name": "ugie-cake/cakephp",
+    "description": "UGIE CakePHP skeleton app with Authentication and CMS",
     "license": "MIT",
     "type": "project",
     "homepage": "https://cakephp.org",

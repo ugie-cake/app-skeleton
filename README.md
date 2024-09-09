@@ -3,6 +3,8 @@ Please visit the IE Repository for any preparation steps required.
 
 To begin, import `schema.sql` into your SQL database. This can be done via PHPMyAdmin, you can find a guide on how to do it [here](https://help.one.com/hc/en-us/articles/115005588189-How-do-I-import-a-database-to-phpMyAdmin).
 
+Don't forget to run `composer install` if you are cloning from this repository!!!!!!!
+
 Read and edit the environment specific config/app_local.php and set up the
 'Datasources'. 
 

@@ -60,7 +60,6 @@ return [
         'imageBaseUrl' => 'img/',
         'cssBaseUrl' => 'css/',
         'jsBaseUrl' => 'js/',
-        'contentBlocksImageUploads' => 'img/content-blocks/',
         'paths' => [
             'plugins' => [ROOT . DS . 'plugins' . DS],
             'templates' => [ROOT . DS . 'templates' . DS],
@@ -108,9 +107,9 @@ return [
          * Duration will be set to '+2 minutes' in bootstrap.php when debug = true
          * If you set 'className' => 'Null' core cache will be disabled.
          */
-        '_cake_core_' => [
+        '_cake_translations_' => [
             'className' => FileEngine::class,
-            'prefix' => 'myapp_cake_core_',
+            'prefix' => 'myapp_cake_translations_',
             'path' => CACHE . 'persistent' . DS,
             'serialize' => true,
             'duration' => '+1 years',
@@ -413,9 +412,33 @@ return [
     'Session' => [
         'defaults' => 'php',
     ],
+
+    /**
+     * DebugKit configuration.
+     *
+     * Contains an array of configurations to apply to the DebugKit plugin, if loaded.
+     * Documentation: https://book.cakephp.org/debugkit/5/en/index.html#configuration
+     *
+     * ## Options
+     *
+     *  - `panels` - Enable or disable panels. The key is the panel name, and the value is true to enable,
+     *     or false to disable.
+     *  - `includeSchemaReflection` - Set to true to enable logging of schema reflection queries. Disabled by default.
+     *  - `safeTld` - Set an array of whitelisted TLDs for local development.
+     *  - `forceEnable` - Force DebugKit to display. Careful with this, it is usually safer to simply whitelist
+     *     your local TLDs.
+     *  - `ignorePathsPattern` - Regex pattern (including delimiter) to ignore paths.
+     *     DebugKit won’t save data for request URLs that match this regex.
+     *  - `ignoreAuthorization` - Set to true to ignore Cake Authorization plugin for DebugKit requests.
+     *     Disabled by default.
+     *  - `maxDepth` - Defines how many levels of nested data should be shown in general for debug output.
+     *     Default is 5. WARNING: Increasing the max depth level can lead to an out of memory error.
+     *  - `variablesPanelMaxDepth` - Defines how many levels of nested data should be shown in the variables tab.
+     *     Default is 5. WARNING: Increasing the max depth level can lead to an out of memory error.
+     */
     'DebugKit' => [
         'forceEnable' => filter_var(env('DEBUG_KIT_FORCE_ENABLE', false), FILTER_VALIDATE_BOOLEAN),
         'safeTld' => env('DEBUG_KIT_SAFE_TLD', null),
-        'ignoreAuthorization' => env('DEBUG_KIT_IGNORE_AUTHORIZATION', false)
+        'ignoreAuthorization' => env('DEBUG_KIT_IGNORE_AUTHORIZATION', false),
     ],
 ];

@@ -78,21 +78,16 @@ endif;
     <header>
         <div class="container text-center">
             <a href="https://cakephp.org/" target="_blank" rel="noopener">
-            <?= $this->ContentBlock->image('logo'); ?>
+                <img alt="CakePHP" src="https://cakephp.org/v2/img/logos/CakePHP_Logo.svg" width="350" />
             </a>
             <h1>
-            <?= $this->ContentBlock->text('website-title'); ?>
+                Welcome to CakePHP <?= h(Configure::version()) ?> Chiffon (🍰)
             </h1>
         </div>
     </header>
     <main class="main">
-        
         <div class="container">
             <div class="content">
-            <?= $this->ContentBlock->html('home-content'); ?>
-            <?= $this->ContentBlock->html('email-button'); ?>
-            <?= $this->Html->link(__('CMS (Login required)'), ['controller' => 'ContentBlocks', 'action' => 'index']) ?>
-            <?= $this->Html->link(__('Login'), ['controller' => 'Auth' , 'action' => 'login']) ?>
                 <div class="row">
                     <div class="column">
                         <div class="message default text-center">
@@ -128,10 +123,8 @@ endif;
 
                         <?php if (extension_loaded('openssl')) : ?>
                             <li class="bullet success">Your version of PHP has the openssl extension loaded.</li>
-                        <?php elseif (extension_loaded('mcrypt')) : ?>
-                            <li class="bullet success">Your version of PHP has the mcrypt extension loaded.</li>
                         <?php else : ?>
-                            <li class="bullet problem">Your version of PHP does NOT have the openssl or mcrypt extension loaded.</li>
+                            <li class="bullet problem">Your version of PHP does NOT have the openssl extension loaded.</li>
                         <?php endif; ?>
 
                         <?php if (extension_loaded('intl')) : ?>
@@ -160,7 +153,7 @@ endif;
                             <li class="bullet problem">Your logs directory is NOT writable.</li>
                         <?php endif; ?>
 
-                        <?php $settings = Cache::getConfig('_cake_core_'); ?>
+                        <?php $settings = Cache::getConfig('_cake_translations_'); ?>
                         <?php if (!empty($settings)) : ?>
                             <li class="bullet success">The <em><?= h($settings['className']) ?></em> is being used for core caching. To change the config edit config/app.php</li>
                         <?php else : ?>

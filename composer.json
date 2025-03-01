@@ -1,17 +1,14 @@
 {
-    "name": "ugie-cake/cakephp",
-    "description": "UGIE CakePHP skeleton app with Authentication and CMS",
+    "name": "cakephp/app",
+    "description": "CakePHP skeleton app",
     "license": "MIT",
     "type": "project",
     "homepage": "https://cakephp.org",
     "require": {
         "php": ">=8.1",
-        "ext-json": "*",
-        "cakephp/authentication": "^3.1",
-        "cakephp/cakephp": "^5.0.1",
+        "cakephp/cakephp": "5.1.*",
         "cakephp/migrations": "^4.0.0",
         "cakephp/plugin-installer": "^2.0",
-        "ezyang/htmlpurifier": "^4.17",
         "mobiledetect/mobiledetectlib": "^4.8.03"
     },
     "require-dev": {
@@ -19,7 +16,7 @@
         "cakephp/cakephp-codesniffer": "^5.0",
         "cakephp/debug_kit": "^5.0.0",
         "josegonzalez/dotenv": "^4.0",
-        "phpunit/phpunit": "^10.1.0"
+        "phpunit/phpunit": "^10.5.5 || ^11.1.3"
     },
     "suggest": {
         "cakephp/repl": "Console tools for a REPL interface for CakePHP applications.",
